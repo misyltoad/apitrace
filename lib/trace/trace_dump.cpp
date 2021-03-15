@@ -229,7 +229,7 @@ void Dumper::visit(Array *array) {
 }
 
 void Dumper::visit(Blob *blob) {
-    os << pointer << "blob(" << blob->size << ")" << normal;
+    os << pointer << "blob(" << blob->base_ptr << ", " << blob->size << ")" << normal;
 }
 
 void Dumper::visit(Pointer *p) {
